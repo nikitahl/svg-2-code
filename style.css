@@ -1,0 +1,188 @@
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fbfbfb;
+  --button-color: #fff;
+  --button-border-radius: 5px;
+  --field-border-radius: 3px;
+  --field-border-color: #ccc;
+}
+
+main,
+footer {
+  width: 800px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.title,
+.subtitle {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.3em;
+  color: #383f62;
+}
+
+.subtitle {
+  font-size: 1.1em;
+}
+
+.subtitle.small {
+  color: #888;
+  font-size: .9em;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-item {
+  flex: 0 0 49%;
+  max-width: 49%;
+}
+
+.upload-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #f6f6f6;
+  border-radius: var(--field-border-radius);
+  border: 1px dashed var(--field-border-color);
+  color: transparent;
+}
+
+.upload-container:hover input[type=file] {
+  background-color: #eee;
+}
+
+input[type=file]::file-selector-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  cursor: pointer;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: var(--button-border-radius);
+  color: var(--button-color);
+  cursor: pointer;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+input[type=file]::before {
+  content: 'Drop SVG file here or';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+
+.CodeMirror {
+  border-radius: var(--field-border-radius);
+  border: 1px solid var(--field-border-color);
+}
+
+.CodeMirror * {
+  font-family: monospace;
+}
+
+.preview {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: var(--field-border-radius);
+  border: 1px solid var(--field-border-color);
+}
+
+input[type=file],
+input[type=file]::file-selector-button,
+.control {
+  transition: background .15s ease-in-out;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.control {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  flex: 0 0 auto;
+  border: none;
+  text-decoration: none;
+  margin: 0 0 10px;
+  padding: 10px 30px;
+  border-radius: var(--button-border-radius);
+  color: var(--button-color);
+  font-size: 1em;
+  background: #0de86c;
+  cursor: pointer;
+}
+
+.control:hover {
+  background: #0bc45b;
+}
+
+.control::before {
+  margin-right: 10px;
+}
+
+.control-download::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-download' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='white' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2'%3E%3C/path%3E%3Cpolyline points='7 11 12 16 17 11'%3E%3C/polyline%3E%3Cline x1='12' y1='4' x2='12' y2='16'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.control-copy::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-clipboard' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='white' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2'%3E%3C/path%3E%3Crect x='9' y='3' width='6' height='4' rx='2'%3E%3C/rect%3E%3C/svg%3E");
+}
+
+.about {
+  line-height: 1.8;
+}
+
+footer {
+  padding: 30px 0 0;
+}
+
+.footer-text {
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid var(--field-border-color);
+  font-size: .8em;
+}
+
+.footer-text a {
+  color: #17a2d9;
+}
