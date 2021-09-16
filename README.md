@@ -1,6 +1,6 @@
 # SVG to Code
 
-Online tool to convert SVG image to code and vice verca.
+Online tool to convert SVG image to code and vice versa.
 
 ## Code of Conduct
 
