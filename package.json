@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:nikitahl/svg-2-code.git",
-  "author": "Nikita Hlopov<nikita.h@gmail.com>",
+  "author": "Nikita Hlopov",
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
