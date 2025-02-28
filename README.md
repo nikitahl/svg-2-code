@@ -1,5 +1,7 @@
 # SVG to Code
 
+![](img/svg-to-code.png)
+
 An online tool to convert SVG images to HTML code fast and easy. Make conversions also vice versa.
 
 Drag and drop SVG image to instantly see the output HTML code. Or paste/edit the HTML code and see the actual image in the Preview box. Copy output code to Clipboard or download SVG image to your computer.
