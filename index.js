@@ -7,6 +7,7 @@ import './codemirror/mode/xml/xml.js'
   const preview = document.querySelector('.preview')
   const download = document.getElementById('download')
   const copy = document.getElementById('copy')
+  const previewBg = document.getElementById('preview-bg')
   let code = ''
 
   const editor = CodeMirror.fromTextArea(result, {
@@ -67,7 +68,14 @@ import './codemirror/mode/xml/xml.js'
     }
   }
 
+  function handlePreviewBgChange (e) {
+    preview.style.background = e?.target?.value || '#e3e3e3'
+  }
+
   input.addEventListener('change', changeFile)
   copy.addEventListener('click', handleCopy)
   download.addEventListener('click', handleDownload)
+  previewBg.addEventListener('input', handlePreviewBgChange)
+
+  handlePreviewBgChange();
 })()

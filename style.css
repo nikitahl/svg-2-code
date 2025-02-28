@@ -13,7 +13,7 @@ body {
 
 main,
 footer {
-  width: 800px;
+  width: 960px;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -113,10 +113,27 @@ input[type=file]::before {
 }
 
 .preview {
-  padding: 20px;
-  margin: 20px 0;
+  padding: 40px 20px;
+  margin: 0;
   border-radius: var(--field-border-radius);
   border: 1px solid var(--field-border-color);
+}
+
+.preview-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.colorpicker {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 input[type=file],
