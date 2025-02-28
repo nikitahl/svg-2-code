@@ -16,6 +16,10 @@ module.exports = [
         chrome: 'readonly'
       }
     },
+    env: {
+      browser: true, // Enables browser global variables like setTimeout
+      node: true // Enables Node.js global variables
+    },
     rules: {
       semi: [ 'error', 'never' ],
       'comma-dangle': [ 'error', 'never' ],
