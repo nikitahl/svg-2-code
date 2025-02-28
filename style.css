@@ -184,6 +184,16 @@ input[type=file]::file-selector-button,
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-clipboard' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='white' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2'%3E%3C/path%3E%3Crect x='9' y='3' width='6' height='4' rx='2'%3E%3C/rect%3E%3C/svg%3E");
 }
 
+.copied {
+  color: transparent;
+}
+
+.copied::after {
+  content: 'Copied!';
+  position: absolute;
+  color: #fff;
+}
+
 .about {
   line-height: 1.8;
 }
