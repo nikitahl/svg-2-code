@@ -8,9 +8,11 @@
   "scripts": {
     "start": "parcel index.html",
     "predeploy": "rm -rf dist && parcel build index.html --public-url ./",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "yarn eslint . --ignore-pattern node_modules --ignore-pattern dist --ignore-pattern .cache --ignore-pattern codemirror"
   },
   "dependencies": {
+    "eslint": "^9.21.0",
     "gh-pages": "^6.3.0",
     "parcel-bundler": "^1.12.5"
   },

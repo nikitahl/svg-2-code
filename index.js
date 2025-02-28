@@ -25,7 +25,7 @@ import './codemirror/mode/xml/xml.js'
   })
 
   function svgDataURL(svg) {
-    const svgAsXML = (new XMLSerializer).serializeToString(svg)
+    const svgAsXML = (new window.XMLSerializer).serializeToString(svg)
     return 'data:image/svg+xml,' + encodeURIComponent(svgAsXML)
   }
 
@@ -53,13 +53,13 @@ import './codemirror/mode/xml/xml.js'
 
   function changeFile() {
     const file = input.files[0]
-    const reader = new FileReader()
+    const reader = new window.FileReader()
     reader.addEventListener('load', readFile)
     reader.readAsText(file)
   }
 
   function handleCopy () {
-    navigator.clipboard.writeText(code)
+    window.navigator.clipboard.writeText(code)
   }
 
   function handleDownload (e) {
@@ -77,5 +77,5 @@ import './codemirror/mode/xml/xml.js'
   download.addEventListener('click', handleDownload)
   previewBg.addEventListener('input', handlePreviewBgChange)
 
-  handlePreviewBgChange();
+  handlePreviewBgChange()
 })()
