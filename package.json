@@ -11,11 +11,11 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^6.3.0",
     "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
+    "parcel": "^2.13.3",
     "parcel-plugin-meta-images": "github:plumdumpling/parcel-plugin-meta-images"
   }
 }
