@@ -13,12 +13,11 @@ module.exports = [
         document: 'readonly',
         window: 'readonly',
         console: 'readonly',
-        chrome: 'readonly'
+        chrome: 'readonly',
+        setTimeout: 'readonly',
+        XMLSerializer: 'readonly',
+        FileReader: 'readonly'
       }
-    },
-    env: {
-      browser: true, // Enables browser global variables like setTimeout
-      node: true // Enables Node.js global variables
     },
     rules: {
       semi: [ 'error', 'never' ],
