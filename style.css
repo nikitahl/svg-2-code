@@ -213,3 +213,39 @@ footer {
 .footer-text a {
   color: #17a2d9;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #eee;
+  }
+
+  .title {
+    color: #7ca4fc;
+  }
+
+  .subtitle.small {
+    color: #ddd;
+  }
+
+  input[type=file] {
+    background: #555;
+    border-color: #999;
+  }
+
+  .upload-container:hover input[type=file] {
+    background: #2f2f2f;
+  }
+
+  input[type=file]::before {
+    color: #eee;
+  }
+
+  .footer-text a {
+    color: #85b9fa;
+  }
+
+  .CodeMirror {
+    border-color: #797979;
+  }
+}

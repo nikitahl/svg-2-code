@@ -9,13 +9,18 @@ import './codemirror/mode/xml/xml.js'
   const copy = document.getElementById('copy')
   const previewBg = document.getElementById('preview-bg')
   let code = ''
+  let theme = 'default'
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    theme = 'material-darker'
+  }
 
   const editor = CodeMirror.fromTextArea(result, {
     lineNumbers: true,
     mode: {
       name: 'xml'
     },
-    theme: 'default',
+    theme: theme,
     tabSize: 2
   })
 
