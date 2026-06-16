@@ -124,7 +124,7 @@ import './codemirror/mode/xml/xml.js'
 
   function htmlToJsx(htmlStr) {
     let result = htmlStr
-    for (const [htmlAttr, jsxAttr] of Object.entries(ATTRIBUTE_MAPPING)) {
+    for (const [ htmlAttr, jsxAttr ] of Object.entries(ATTRIBUTE_MAPPING)) {
       const escapedHtmlAttr = htmlAttr.replace(/:/g, '\\:')
       const regex = new RegExp(`\\b${escapedHtmlAttr}\\s*=`, 'g')
       result = result.replace(regex, `${jsxAttr}=`)
@@ -134,7 +134,7 @@ import './codemirror/mode/xml/xml.js'
 
   function jsxToHtml(jsxStr) {
     let result = jsxStr
-    for (const [htmlAttr, jsxAttr] of Object.entries(ATTRIBUTE_MAPPING)) {
+    for (const [ htmlAttr, jsxAttr ] of Object.entries(ATTRIBUTE_MAPPING)) {
       const regex = new RegExp(`\\b${jsxAttr}\\s*=`, 'g')
       result = result.replace(regex, `${htmlAttr}=`)
     }
